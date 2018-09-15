@@ -37,13 +37,13 @@ describe('Testing file\'s content', () => {
   })
   it('should display an error when the file is empty', (done) => {
     argv_send("./puzzles/error/nothing.txt", (res) => {
-      assert.equal("Empty file", res)
+      assert.equal("No coordinates in this file", res)
       done()
     })
   })
   it('should display an error when the file contain only \\n', (done) => {
     argv_send("./puzzles/error/backslash.txt", (res) => {
-      assert.equal("Empty file", res)
+      assert.equal("No coordinates in this file", res)
       done()
     })
   })
